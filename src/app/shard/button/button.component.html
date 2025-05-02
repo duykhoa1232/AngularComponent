@@ -1,7 +1,6 @@
-  <span>
-    <ng-content/>
-  </span>
-
-  <ng-content select=".icon"/>
-
-
+<span>
+  <ng-content></ng-content> <!-- note: Chiếu nội dung con được truyền từ thành phần cha. -->
+</span>
+<span class="icon">
+  <ng-content select="icon"></ng-content> <!-- note: Chiếu nội dung con có selector `icon`. -->
+</span>

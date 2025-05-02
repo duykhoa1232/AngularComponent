@@ -1,25 +1,31 @@
- <app-header/>
+<app-header/> <!-- note: Thành phần `app-header` hiển thị phần tiêu đề của ứng dụng. -->
+
 <main>
-  <div id="dashboard">
-    <div class="dashboard-item">
-     <app-dashboard-item  [image]="{src:'status.png', alt:'A signal symbol'}"
-     title="Serves status">
-     <app-server-status/>
-     </app-dashboard-item>
+  <div id="dashboard"> <!-- note: Container chính cho bảng điều khiển (dashboard). -->
+
+    <div class="dashboard-item"> <!-- note: Một mục trong bảng điều khiển. -->
+      <app-dashboard-item
+        [image]="{src:'status.png', alt:'A signal symbol'}" 
+        title="Serves status"> <!-- note: Truyền tiêu đề cho `DashboardItemComponent`. -->
+        <app-server-status/> <!-- note: Thành phần con hiển thị trạng thái máy chủ. -->
+      </app-dashboard-item>
     </div>
 
     <div class="dashboard-item">
-     <app-dashboard-item  [image]="{src:'globe.png', alt:'A globe'}"
-     title="Traffic">
-     <app-traffic/>
-     </app-dashboard-item>
+      <app-dashboard-item
+        [image]="{src:'globe.png', alt:'A globe'}"
+        title="Traffic">
+        <app-traffic/> <!-- note: Thành phần con hiển thị thông tin lưu lượng truy cập. -->
+      </app-dashboard-item>
     </div>
 
     <div class="dashboard-item">
-     <app-dashboard-item  [image]="{src:'list.png', alt:'A list of items'}"
-     title="Support Tickets">
-     <app-tickets/>
-     </app-dashboard-item>
+      <app-dashboard-item
+        [image]="{src:'list.png', alt:'A list of items'}"
+        title="Support Tickets">
+        <app-tickets/> <!-- note: Thành phần con hiển thị thông tin về các yêu cầu hỗ trợ. -->
+      </app-dashboard-item>
     </div>
+
   </div>
 </main>

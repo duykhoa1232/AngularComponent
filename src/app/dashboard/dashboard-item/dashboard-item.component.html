@@ -1,7 +1,8 @@
-<article>
-  <header>
-    <img [src]="image().src" [alt]="image().alt" />
-    <h2>{{title()}}</h2>
-  </header>
-  <ng-content/>
-</article>
+ <!-- note: Container chính cho một mục trong bảng điều khiển. -->
+  <article>
+    <header>
+      <img [src]="image().src" [alt]="image().alt" /> <!-- note: Hiển thị hình ảnh với dữ liệu được truyền từ cha. -->
+      <h2>{{ title() }}</h2> <!-- note: Hiển thị tiêu đề được truyền từ cha. -->
+    </header>
+    <ng-content /> <!-- note: Chiếu nội dung con được truyền từ thành phần cha. -->
+  </article>
